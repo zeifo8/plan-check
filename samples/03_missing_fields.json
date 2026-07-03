@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "name": "Пустые поля",
+    "description": "Файл для проверки обязательных и желательных полей."
+  },
+  "tasks": [
+    {
+      "id": 1,
+      "text": "",
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-03",
+      "assignee": "Иван",
+      "category": "Аналитика",
+      "deliverable": "Требования"
+    },
+    {
+      "id": 2,
+      "text": "Дизайн",
+      "start_date": "",
+      "end_date": "2026-10-06",
+      "assignee": "Анна",
+      "category": "Дизайн",
+      "deliverable": "Макеты"
+    },
+    {
+      "id": 3,
+      "text": "Frontend",
+      "start_date": "2026-10-07",
+      "end_date": "",
+      "assignee": "Сергей",
+      "category": "Разработка",
+      "deliverable": "Интерфейс"
+    },
+    {
+      "id": 4,
+      "text": "Backend",
+      "start_date": "2026-10-07",
+      "end_date": "2026-10-12",
+      "assignee": "",
+      "category": "Разработка",
+      "deliverable": "API"
+    },
+    {
+      "id": 5,
+      "text": "Тестирование",
+      "start_date": "2026-10-13",
+      "end_date": "2026-10-15",
+      "assignee": "Мария",
+      "category": "QA",
+      "deliverable": ""
+    },
+    {
+      "id": 6,
+      "text": "Сдача",
+      "start_date": "2026-10-16",
+      "end_date": "2026-10-16",
+      "assignee": "Леонид",
+      "category": "Milestone",
+      "deliverable": "Сдача"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 5,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 4,
+      "source": 5,
+      "target": 6,
+      "type": "finish_to_start"
+    }
+  ]
+}

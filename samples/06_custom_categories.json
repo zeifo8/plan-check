@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "name": "Свои категории",
+    "description": "Файл для проверки ручных категорий и цветов по умолчанию."
+  },
+  "tasks": [
+    {
+      "id": 1,
+      "text": "Закупка оборудования",
+      "start_date": "2027-01-10",
+      "end_date": "2027-01-13",
+      "assignee": "Иван",
+      "category": "Закупки",
+      "deliverable": "Закупленные материалы"
+    },
+    {
+      "id": 2,
+      "text": "Логистика",
+      "start_date": "2027-01-14",
+      "end_date": "2027-01-16",
+      "assignee": "Анна",
+      "category": "Логистика",
+      "deliverable": "Доставка"
+    },
+    {
+      "id": 3,
+      "text": "Монтаж",
+      "start_date": "2027-01-17",
+      "end_date": "2027-01-20",
+      "assignee": "Сергей",
+      "category": "Монтаж",
+      "deliverable": "Смонтированная зона"
+    },
+    {
+      "id": 4,
+      "text": "Приёмка",
+      "start_date": "2027-01-21",
+      "end_date": "2027-01-22",
+      "assignee": "Мария",
+      "category": "Контроль качества",
+      "deliverable": "Акт приёмки"
+    },
+    {
+      "id": 5,
+      "text": "Финальная сдача",
+      "start_date": "2027-01-23",
+      "end_date": "2027-01-23",
+      "assignee": "Леонид",
+      "category": "Milestone",
+      "deliverable": "Сдача проекта"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "type": "finish_to_start"
+    }
+  ]
+}

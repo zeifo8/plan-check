@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "name": "Ошибки дат",
+    "description": "Некорректные даты и окончание раньше начала."
+  },
+  "tasks": [
+    {
+      "id": 1,
+      "text": "Анализ",
+      "start_date": "2026-11-05",
+      "end_date": "2026-11-03",
+      "assignee": "Иван",
+      "category": "Аналитика",
+      "deliverable": "Аналитика"
+    },
+    {
+      "id": 2,
+      "text": "Дизайн",
+      "start_date": "05.11.2026",
+      "end_date": "2026-11-08",
+      "assignee": "Анна",
+      "category": "Дизайн",
+      "deliverable": "Макет"
+    },
+    {
+      "id": 3,
+      "text": "Разработка",
+      "start_date": "2026/11/09",
+      "end_date": "2026-11-15",
+      "assignee": "Сергей",
+      "category": "Разработка",
+      "deliverable": "Модуль"
+    },
+    {
+      "id": 4,
+      "text": "Длинная задача",
+      "start_date": "2026-11-16",
+      "end_date": "2026-12-05",
+      "assignee": "Мария",
+      "category": "Управление",
+      "deliverable": "Большой блок работ"
+    },
+    {
+      "id": 5,
+      "text": "Финальная сдача",
+      "start_date": "2026-12-06",
+      "end_date": "2026-12-06",
+      "assignee": "Леонид",
+      "category": "Milestone",
+      "deliverable": "Сдача"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 5,
+      "type": "finish_to_start"
+    }
+  ]
+}

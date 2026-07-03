@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "name": "Корректный проект",
+    "description": "План без критических ошибок."
+  },
+  "tasks": [
+    {
+      "id": 1,
+      "text": "Сбор требований",
+      "start_date": "2026-08-01",
+      "end_date": "2026-08-02",
+      "assignee": "Иван",
+      "category": "Аналитика",
+      "deliverable": "Требования"
+    },
+    {
+      "id": 2,
+      "text": "Проектирование структуры",
+      "start_date": "2026-08-03",
+      "end_date": "2026-08-04",
+      "assignee": "Анна",
+      "category": "Аналитика",
+      "deliverable": "Структура проекта"
+    },
+    {
+      "id": 3,
+      "text": "Дизайн интерфейса",
+      "start_date": "2026-08-05",
+      "end_date": "2026-08-07",
+      "assignee": "Мария",
+      "category": "Дизайн",
+      "deliverable": "Макеты"
+    },
+    {
+      "id": 4,
+      "text": "Frontend",
+      "start_date": "2026-08-08",
+      "end_date": "2026-08-12",
+      "assignee": "Сергей",
+      "category": "Разработка",
+      "deliverable": "Интерфейс"
+    },
+    {
+      "id": 5,
+      "text": "Backend",
+      "start_date": "2026-08-08",
+      "end_date": "2026-08-13",
+      "assignee": "Дмитрий",
+      "category": "Разработка",
+      "deliverable": "API"
+    },
+    {
+      "id": 6,
+      "text": "Тестирование",
+      "start_date": "2026-08-14",
+      "end_date": "2026-08-16",
+      "assignee": "Ольга",
+      "category": "QA",
+      "deliverable": "Отчёт о тестировании"
+    },
+    {
+      "id": 7,
+      "text": "Финальная сдача",
+      "start_date": "2026-08-17",
+      "end_date": "2026-08-17",
+      "assignee": "Леонид",
+      "category": "Milestone",
+      "deliverable": "Готовый проект"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 4,
+      "source": 3,
+      "target": 5,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 5,
+      "source": 4,
+      "target": 6,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 6,
+      "source": 5,
+      "target": 6,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 7,
+      "source": 6,
+      "target": 7,
+      "type": "finish_to_start"
+    }
+  ]
+}

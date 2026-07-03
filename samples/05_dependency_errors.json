@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "name": "Ошибки зависимостей",
+    "description": "Файл для проверки зависимостей, циклов и несуществующих задач."
+  },
+  "tasks": [
+    {
+      "id": 1,
+      "text": "Подготовка",
+      "start_date": "2026-12-01",
+      "end_date": "2026-12-03",
+      "assignee": "Иван",
+      "category": "Аналитика",
+      "deliverable": "План"
+    },
+    {
+      "id": 2,
+      "text": "Разработка",
+      "start_date": "2026-12-02",
+      "end_date": "2026-12-08",
+      "assignee": "Анна",
+      "category": "Разработка",
+      "deliverable": "Код"
+    },
+    {
+      "id": 3,
+      "text": "Тестирование",
+      "start_date": "2026-12-07",
+      "end_date": "2026-12-10",
+      "assignee": "Мария",
+      "category": "QA",
+      "deliverable": "Отчёт"
+    },
+    {
+      "id": 4,
+      "text": "Документация",
+      "start_date": "2026-12-09",
+      "end_date": "2026-12-11",
+      "assignee": "Сергей",
+      "category": "Документация",
+      "deliverable": "Инструкция"
+    },
+    {
+      "id": 5,
+      "text": "Финальная сдача",
+      "start_date": "2026-12-12",
+      "end_date": "2026-12-12",
+      "assignee": "Леонид",
+      "category": "Milestone",
+      "deliverable": "Сдача"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 2,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 4,
+      "source": 99,
+      "target": 4,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 5,
+      "type": "finish_to_start"
+    }
+  ]
+}

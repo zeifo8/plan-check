@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "name": "Перегрузка исполнителя",
+    "description": "Один исполнитель назначен на несколько задач в один период."
+  },
+  "tasks": [
+    {
+      "id": 1,
+      "text": "Подготовка ТЗ",
+      "start_date": "2026-09-01",
+      "end_date": "2026-09-03",
+      "assignee": "Иван",
+      "category": "Аналитика",
+      "deliverable": "ТЗ"
+    },
+    {
+      "id": 2,
+      "text": "Проектирование базы данных",
+      "start_date": "2026-09-02",
+      "end_date": "2026-09-06",
+      "assignee": "Иван",
+      "category": "Разработка",
+      "deliverable": "ER-диаграмма"
+    },
+    {
+      "id": 3,
+      "text": "Разработка API",
+      "start_date": "2026-09-04",
+      "end_date": "2026-09-10",
+      "assignee": "Иван",
+      "category": "Разработка",
+      "deliverable": "API"
+    },
+    {
+      "id": 4,
+      "text": "Дизайн экранов",
+      "start_date": "2026-09-04",
+      "end_date": "2026-09-07",
+      "assignee": "Анна",
+      "category": "Дизайн",
+      "deliverable": "Макеты"
+    },
+    {
+      "id": 5,
+      "text": "Тестирование API",
+      "start_date": "2026-09-11",
+      "end_date": "2026-09-13",
+      "assignee": "Мария",
+      "category": "QA",
+      "deliverable": "Баг-репорт"
+    },
+    {
+      "id": 6,
+      "text": "Финальная сдача",
+      "start_date": "2026-09-14",
+      "end_date": "2026-09-14",
+      "assignee": "Леонид",
+      "category": "Milestone",
+      "deliverable": "Сдача проекта"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 5,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 4,
+      "source": 5,
+      "target": 6,
+      "type": "finish_to_start"
+    }
+  ]
+}

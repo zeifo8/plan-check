@@ -1,0 +1,394 @@
+{
+  "meta": {
+    "name": "Большой проект 26 задач",
+    "description": "Проект для проверки производительности, масштаба и прокрутки."
+  },
+  "tasks": [
+    {
+      "id": 1,
+      "text": "Задача 1: дизайн",
+      "start_date": "2027-02-01",
+      "end_date": "2027-02-03",
+      "assignee": "Анна",
+      "category": "Дизайн",
+      "deliverable": "Результат задачи 1"
+    },
+    {
+      "id": 2,
+      "text": "Задача 2: разработка",
+      "start_date": "2027-02-03",
+      "end_date": "2027-02-06",
+      "assignee": "Мария",
+      "category": "Разработка",
+      "deliverable": "Результат задачи 2"
+    },
+    {
+      "id": 3,
+      "text": "Задача 3: qa",
+      "start_date": "2027-02-05",
+      "end_date": "2027-02-09",
+      "assignee": "Сергей",
+      "category": "QA",
+      "deliverable": "Результат задачи 3"
+    },
+    {
+      "id": 4,
+      "text": "Задача 4: документация",
+      "start_date": "2027-02-07",
+      "end_date": "2027-02-08",
+      "assignee": "Дмитрий",
+      "category": "Документация",
+      "deliverable": "Результат задачи 4"
+    },
+    {
+      "id": 5,
+      "text": "Задача 5: управление",
+      "start_date": "2027-02-09",
+      "end_date": "2027-02-11",
+      "assignee": "Ольга",
+      "category": "Управление",
+      "deliverable": "Результат задачи 5"
+    },
+    {
+      "id": 6,
+      "text": "Задача 6: аналитика",
+      "start_date": "2027-02-10",
+      "end_date": "2027-02-13",
+      "assignee": "Леонид",
+      "category": "Аналитика",
+      "deliverable": "Результат задачи 6"
+    },
+    {
+      "id": 7,
+      "text": "Задача 7: дизайн",
+      "start_date": "2027-02-12",
+      "end_date": "2027-02-16",
+      "assignee": "Иван",
+      "category": "Дизайн",
+      "deliverable": "Результат задачи 7"
+    },
+    {
+      "id": 8,
+      "text": "Задача 8: разработка",
+      "start_date": "2027-02-14",
+      "end_date": "2027-02-15",
+      "assignee": "Анна",
+      "category": "Разработка",
+      "deliverable": "Результат задачи 8"
+    },
+    {
+      "id": 9,
+      "text": "Задача 9: qa",
+      "start_date": "2027-02-16",
+      "end_date": "2027-02-18",
+      "assignee": "Мария",
+      "category": "QA",
+      "deliverable": "Результат задачи 9"
+    },
+    {
+      "id": 10,
+      "text": "Задача 10: документация",
+      "start_date": "2027-02-18",
+      "end_date": "2027-02-21",
+      "assignee": "Сергей",
+      "category": "Документация",
+      "deliverable": "Результат задачи 10"
+    },
+    {
+      "id": 11,
+      "text": "Задача 11: управление",
+      "start_date": "2027-02-19",
+      "end_date": "2027-02-23",
+      "assignee": "Дмитрий",
+      "category": "Управление",
+      "deliverable": "Результат задачи 11"
+    },
+    {
+      "id": 12,
+      "text": "Задача 12: аналитика",
+      "start_date": "2027-02-21",
+      "end_date": "2027-02-22",
+      "assignee": "Ольга",
+      "category": "Аналитика",
+      "deliverable": "Результат задачи 12"
+    },
+    {
+      "id": 13,
+      "text": "Задача 13: дизайн",
+      "start_date": "2027-02-23",
+      "end_date": "2027-02-25",
+      "assignee": "Леонид",
+      "category": "Дизайн",
+      "deliverable": "Результат задачи 13"
+    },
+    {
+      "id": 14,
+      "text": "Задача 14: разработка",
+      "start_date": "2027-02-25",
+      "end_date": "2027-02-28",
+      "assignee": "Иван",
+      "category": "Разработка",
+      "deliverable": "Результат задачи 14"
+    },
+    {
+      "id": 15,
+      "text": "Задача 15: qa",
+      "start_date": "2027-02-27",
+      "end_date": "2027-03-03",
+      "assignee": "Анна",
+      "category": "QA",
+      "deliverable": "Результат задачи 15"
+    },
+    {
+      "id": 16,
+      "text": "Задача 16: документация",
+      "start_date": "2027-02-28",
+      "end_date": "2027-03-01",
+      "assignee": "Мария",
+      "category": "Документация",
+      "deliverable": "Результат задачи 16"
+    },
+    {
+      "id": 17,
+      "text": "Задача 17: управление",
+      "start_date": "2027-03-02",
+      "end_date": "2027-03-04",
+      "assignee": "Сергей",
+      "category": "Управление",
+      "deliverable": "Результат задачи 17"
+    },
+    {
+      "id": 18,
+      "text": "Задача 18: аналитика",
+      "start_date": "2027-03-04",
+      "end_date": "2027-03-07",
+      "assignee": "Дмитрий",
+      "category": "Аналитика",
+      "deliverable": "Результат задачи 18"
+    },
+    {
+      "id": 19,
+      "text": "Задача 19: дизайн",
+      "start_date": "2027-03-06",
+      "end_date": "2027-03-10",
+      "assignee": "Ольга",
+      "category": "Дизайн",
+      "deliverable": "Результат задачи 19"
+    },
+    {
+      "id": 20,
+      "text": "Задача 20: разработка",
+      "start_date": "2027-03-08",
+      "end_date": "2027-03-09",
+      "assignee": "Леонид",
+      "category": "Разработка",
+      "deliverable": "Результат задачи 20"
+    },
+    {
+      "id": 21,
+      "text": "Задача 21: qa",
+      "start_date": "2027-03-09",
+      "end_date": "2027-03-11",
+      "assignee": "Иван",
+      "category": "QA",
+      "deliverable": "Результат задачи 21"
+    },
+    {
+      "id": 22,
+      "text": "Задача 22: документация",
+      "start_date": "2027-03-11",
+      "end_date": "2027-03-14",
+      "assignee": "Анна",
+      "category": "Документация",
+      "deliverable": "Результат задачи 22"
+    },
+    {
+      "id": 23,
+      "text": "Задача 23: управление",
+      "start_date": "2027-03-13",
+      "end_date": "2027-03-17",
+      "assignee": "Мария",
+      "category": "Управление",
+      "deliverable": "Результат задачи 23"
+    },
+    {
+      "id": 24,
+      "text": "Задача 24: аналитика",
+      "start_date": "2027-03-15",
+      "end_date": "2027-03-16",
+      "assignee": "Сергей",
+      "category": "Аналитика",
+      "deliverable": "Результат задачи 24"
+    },
+    {
+      "id": 25,
+      "text": "Задача 25: дизайн",
+      "start_date": "2027-03-17",
+      "end_date": "2027-03-19",
+      "assignee": "Дмитрий",
+      "category": "Дизайн",
+      "deliverable": "Результат задачи 25"
+    },
+    {
+      "id": 26,
+      "text": "Финальная сдача",
+      "start_date": "2027-03-23",
+      "end_date": "2027-03-23",
+      "assignee": "Леонид",
+      "category": "Milestone",
+      "deliverable": "Финальный отчёт"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 2,
+      "source": 2,
+      "target": 3,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 3,
+      "source": 3,
+      "target": 4,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 4,
+      "source": 4,
+      "target": 5,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 5,
+      "source": 5,
+      "target": 6,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 6,
+      "source": 6,
+      "target": 7,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 7,
+      "source": 7,
+      "target": 8,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 8,
+      "source": 8,
+      "target": 9,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 9,
+      "source": 9,
+      "target": 10,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 10,
+      "source": 10,
+      "target": 11,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 11,
+      "source": 11,
+      "target": 12,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 12,
+      "source": 12,
+      "target": 13,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 13,
+      "source": 13,
+      "target": 14,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 14,
+      "source": 14,
+      "target": 15,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 15,
+      "source": 15,
+      "target": 16,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 16,
+      "source": 16,
+      "target": 17,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 17,
+      "source": 17,
+      "target": 18,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 18,
+      "source": 18,
+      "target": 19,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 19,
+      "source": 19,
+      "target": 20,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 20,
+      "source": 20,
+      "target": 21,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 21,
+      "source": 21,
+      "target": 22,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 22,
+      "source": 22,
+      "target": 23,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 23,
+      "source": 23,
+      "target": 24,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 24,
+      "source": 24,
+      "target": 25,
+      "type": "finish_to_start"
+    },
+    {
+      "id": 25,
+      "source": 25,
+      "target": 26,
+      "type": "finish_to_start"
+    }
+  ]
+}
