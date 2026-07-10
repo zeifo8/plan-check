@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Проверка плана</title>
+  <link rel="stylesheet" href="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.css" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body data-page="issues" data-path-prefix="../">
+  <div class="page">
+    <aside class="sidebar">
+      <div class="brand text-only-brand"><div><h1>Проверка плана</h1><p>Гант</p></div></div>
+      <nav class="nav"><a class="nav-item" href="../index.html">Обзор</a><a class="nav-item" href="./gantt.html">Диаграмма Ганта</a><a class="nav-item" href="./resources.html">Задачи исполнителей</a><a class="nav-item" href="./three.html">3D просмотр</a><a class="nav-item active" href="./issues.html">Проверка</a><a class="nav-item" href="./data.html">Данные/ввод</a></nav>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h2>Визуализация проектного плана и его анализ</h2>
+          <p class="top-description">Один проектный план отображается в нескольких представлениях: классическая диаграмма Ганта, задач исполнителей и интерактивная 3D-визуализация по осям время × исполнитель × задача.</p>
+        </div>
+        <div class="actions">
+          <label class="btn file-btn">Загрузить JSON<input type="file" id="jsonFileInput" accept=".json,application/json" /></label>
+          <label class="btn file-btn">Загрузить Excel/CSV<input type="file" id="tableFileInput" accept=".csv,.xlsx,.xls,text/csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" /></label>
+          <button class="btn" id="downloadSampleBtn">Скачать JSON</button>
+          <button class="btn danger-soft" id="clearProjectBtn">Очистить</button>
+          <button class="btn dark" id="exportReportBtn">Экспорт отчёта</button>
+        </div>
+      </header>
+      <section class="view active" id="view-issues">
+        <section class="panel full">
+          <div class="panel-head split">
+            <div>
+              <h3>Панель найденных ошибок</h3>
+              <p>Проблемы разделены на критические ошибки, предупреждения и информационные замечания.</p>
+            </div>
+            <button class="btn small" id="runValidationBtn">Запустить проверку</button>
+          </div>
+          <div class="filters">
+            <button class="filter active" data-filter="all">Все</button>
+            <button class="filter" data-filter="critical">Критические</button>
+            <button class="filter" data-filter="warning">Предупреждения</button>
+            <button class="filter" data-filter="info">Информация</button>
+          </div>
+          <div id="issuesList" class="issues empty-box">Проверка ещё не выполнялась.</div>
+        </section>
+      </section>
+    </main>
+  </div>
+  <script src="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="../assets/js/utils.js"></script>
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/validation.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script src="../assets/js/gantt.js"></script>
+  <script src="../assets/js/resource.js"></script>
+  <script src="../assets/js/three-view.js"></script>
+  <script src="../assets/js/report.js"></script>
+  <script src="../assets/js/app.js"></script></body>
+</html>

@@ -4,57 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Проверка плана</title>
-
   <link rel="stylesheet" href="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.css" />
   <link rel="stylesheet" href="./assets/styles.css" />
 </head>
-<body>
+<body data-page="dashboard" data-path-prefix="">
   <div class="page">
     <aside class="sidebar">
-      <div class="brand text-only-brand">
-        <div>
-          <h1>Проверка плана</h1>
-          <p>Гант</p>
-        </div>
-      </div>
-
-      <nav class="nav">
-        <button class="nav-item active" data-view="dashboard">Обзор</button>
-        <button class="nav-item" data-view="gantt">Диаграмма Ганта</button>
-        <button class="nav-item" data-view="resources">Задачи исполнителей</button>
-        <button class="nav-item" data-view="three">3D просмотр</button>
-        <button class="nav-item" data-view="issues">Проверка</button>
-        <button class="nav-item" data-view="data">Данные/ввод</button>
-      </nav>
+      <div class="brand text-only-brand"><div><h1>Проверка плана</h1><p>Гант</p></div></div>
+      <nav class="nav"><a class="nav-item active" href="./index.html">Обзор</a><a class="nav-item" href="./pages/gantt.html">Диаграмма Ганта</a><a class="nav-item" href="./pages/resources.html">Задачи исполнителей</a><a class="nav-item" href="./pages/three.html">3D просмотр</a><a class="nav-item" href="./pages/issues.html">Проверка</a><a class="nav-item" href="./pages/data.html">Данные/ввод</a></nav>
     </aside>
-
     <main class="main">
       <header class="topbar">
         <div>
           <h2>Визуализация проектного плана и его анализ</h2>
-          <p class="top-description">
-            Один проектный план отображается в нескольких представлениях: классическая диаграмма Ганта,
-            задач исполнителей и интерактивная 3D-визуализация по осям время × исполнитель × задача.
-          </p>
+          <p class="top-description">Один проектный план отображается в нескольких представлениях: классическая диаграмма Ганта, задач исполнителей и интерактивная 3D-визуализация по осям время × исполнитель × задача.</p>
         </div>
-
         <div class="actions">
-          <label class="btn file-btn">
-            Загрузить JSON
-            <input type="file" id="jsonFileInput" accept=".json,application/json" />
-          </label>
-
-          <label class="btn file-btn">
-            Загрузить Excel/CSV
-            <input type="file" id="tableFileInput" accept=".csv,.xlsx,.xls,text/csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" />
-          </label>
-
+          <label class="btn file-btn">Загрузить JSON<input type="file" id="jsonFileInput" accept=".json,application/json" /></label>
+          <label class="btn file-btn">Загрузить Excel/CSV<input type="file" id="tableFileInput" accept=".csv,.xlsx,.xls,text/csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" /></label>
           <button class="btn" id="downloadSampleBtn">Скачать JSON</button>
           <button class="btn danger-soft" id="clearProjectBtn">Очистить</button>
           <button class="btn dark" id="exportReportBtn">Экспорт отчёта</button>
         </div>
       </header>
-
       <section class="view active" id="view-dashboard">
         <div class="hero-grid">
           <article class="quality-card">
@@ -109,281 +81,19 @@
           </section>
         </div>
       </section>
-
-      <section class="view" id="view-gantt">
-        <section class="panel full">
-          <div class="panel-head split">
-            <div>
-              <h3>Классическая диаграмма Ганта</h3>
-              <p>Ось X - время, ось Y - задачи. Цвет показывает категорию работ.</p>
-            </div>
-            <div class="view-controls">
-              <button class="btn small" id="ganttZoomOutBtn">−</button>
-              <button class="btn small" id="ganttZoomInBtn">+</button>
-              <button class="btn small" id="ganttFitBtn">Показать всё</button>
-              <span class="pill">Задачи × время</span>
-            </div>
-          </div>
-          <div id="gantt_here"></div>
-        </section>
-      </section>
-
-      <section class="view" id="view-resources">
-        <section class="panel full">
-          <div class="panel-head split">
-            <div>
-              <h3>Задачи исполнителей</h3>
-              <p>Ось X - время, ось Y - исполнители. Красная рамка показывает пересечения задач у одного человека.</p>
-            </div>
-            <div class="view-controls">
-              <button class="btn small" id="resourceZoomOutBtn">−</button>
-              <button class="btn small" id="resourceZoomInBtn">+</button>
-              <button class="btn small" id="resourceFitBtn">Показать всё</button>
-              <span class="pill">Исполнители × время</span>
-            </div>
-          </div>
-          <div id="resourceLegend" class="legend"></div>
-          <div id="resourceTimeline" class="resource-timeline empty-box">
-            Загрузите проект, чтобы увидеть загрузку исполнителей.
-          </div>
-        </section>
-      </section>
-
-
-      <section class="view" id="view-three">
-        <section class="panel full">
-          <div class="panel-head split">
-            <div>
-              <h3>3D просмотр - время × исполнитель × задача</h3>
-              <p>
-                Интерактивное многомерное представление проектного плана.
-                Ось X - время, ось Y - исполнители, ось Z - задачи.
-                Красная рамка показывает задачи с конфликтами загрузки.
-              </p>
-            </div>
-          </div>
-
-          <div class="three-layout">
-            <div class="three-card">
-              <div id="threeContainer" class="three-container"></div>
-              <div class="three-hint">
-                Управление: зажмите левую кнопку мыши для вращения, колесо - масштаб, правая кнопка - перемещение.
-              </div>
-            </div>
-
-            <aside class="three-panel">
-              <h4>Выбранная задача</h4>
-              <div id="threeTaskInfo" class="three-task-info empty-box">
-                Нажмите на блок задачи в 3D-сцене.
-              </div>
-
-              <h4>Что показывает 3D</h4>
-              <p>
-                Это не замена диаграммы Ганта, а дополнительный способ анализа:
-                можно увидеть один и тот же проект сразу по трём измерениям -
-                времени, исполнителям и задачам.
-              </p>
-            </aside>
-          </div>
-        </section>
-      </section>
-
-      <section class="view" id="view-issues">
-        <section class="panel full">
-          <div class="panel-head split">
-            <div>
-              <h3>Панель найденных ошибок</h3>
-              <p>Проблемы разделены на критические ошибки, предупреждения и информационные замечания.</p>
-            </div>
-            <button class="btn small" id="runValidationBtn">Запустить проверку</button>
-          </div>
-          <div class="filters">
-            <button class="filter active" data-filter="all">Все</button>
-            <button class="filter" data-filter="critical">Критические</button>
-            <button class="filter" data-filter="warning">Предупреждения</button>
-            <button class="filter" data-filter="info">Информация</button>
-          </div>
-          <div id="issuesList" class="issues empty-box">Проверка ещё не выполнялась.</div>
-        </section>
-      </section>
-
-      <section class="view" id="view-data">
-
-        <section class="panel full manual-panel">
-          <div class="panel-head split">
-            <div>
-              <h3>Ручной ввод задачи</h3>
-              <p>Можно быстро добавить задачу без подготовки файла. После добавления план автоматически пересчитывается.</p>
-            </div>
-            
-          </div>
-
-          <form id="taskForm" class="task-form">
-            <label>
-              Название задачи
-              <input name="text" type="text" placeholder="Например: Разработка backend" required />
-            </label>
-
-            <label>
-              Дата начала
-              <input name="start_date" type="date" required />
-            </label>
-
-            <label>
-              Дата окончания
-              <input name="end_date" type="date" required />
-            </label>
-
-            <label>
-              Ответственный
-              <input name="assignee" type="text" placeholder="Например: Иван" />
-            </label>
-
-            <label>
-              Категория из списка
-              <select name="category">
-                <option>Аналитика</option>
-                <option>Дизайн</option>
-                <option>Разработка</option>
-                <option>QA</option>
-                <option>Документация</option>
-                <option>Управление</option>
-                <option>Другое</option>
-              </select>
-            </label>
-
-            <label>
-              Своя категория
-              <input name="custom_category" type="text" placeholder="Например: Закупки" />
-            </label>
-
-            <label>
-              Результат/артефакт
-              <input name="deliverable" type="text" placeholder="Например: API, макет, отчёт" />
-            </label>
-
-            <label>
-              Зависит от ID задач
-              <input name="depends_on" type="text" placeholder="Например: 1 или 1,2" />
-            </label>
-
-            <button class="btn primary" type="submit">Добавить задачу</button>
-          </form>
-
-          <div id="manualStatus" class="manual-status" aria-live="polite"></div>
-
-          <div class="manual-list">
-            <div class="manual-list-head">
-              <h4>Добавленные задачи</h4>
-              <p>После добавления задача сразу появляется в таблице ниже.</p>
-            </div>
-            <div class="manual-table-wrap">
-              <table class="manual-table">
-                <thead>
-                  <tr>
-                    <th>ID</th>
-                    <th>Задача</th>
-                    <th>Период</th>
-                    <th>Ответственный</th>
-                    <th>Категория</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody id="manualTasksBody">
-                  <tr>
-                    <td colspan="6" class="empty-row">Пока задач нет.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div class="mini-actions">
-            <button class="btn small" id="saveLocalBtn">Сохранить в браузере</button>
-            <button class="btn small" id="loadLocalBtn">Загрузить из браузера</button>
-          </div>
-        </section>
-
-        <section class="panel full guide-panel">
-          <div class="panel-head">
-            <h3>Как заполнять Excel/CSV</h3>
-            <p>Первая строка должна содержать названия колонок. Даты указываются в формате ГГГГ-ММ-ДД.</p>
-            <a class="btn small" href="./samples/project_plan_template.xlsx" download>Скачать Excel-шаблон</a>
-          </div>
-
-          <div class="format-table-wrap">
-            <table class="format-table">
-              <thead>
-                <tr>
-                  <th>Колонка</th>
-                  <th>Обязательно</th>
-                  <th>Пример</th>
-                  <th>Зачем нужна</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>id</td><td>Да</td><td>1</td><td>Уникальный номер задачи</td></tr>
-                <tr><td>text</td><td>Да</td><td>Разработка backend</td><td>Название задачи</td></tr>
-                <tr><td>start_date</td><td>Да</td><td>2026-07-01</td><td>Дата начала</td></tr>
-                <tr><td>end_date</td><td>Да</td><td>2026-07-05</td><td>Дата окончания</td></tr>
-                <tr><td>assignee</td><td>Да</td><td>Иван</td><td>Ответственный исполнитель</td></tr>
-                <tr><td>category</td><td>Нет</td><td>Разработка</td><td>Тип работ и цвет задачи</td></tr>
-                <tr><td>deliverable</td><td>Желательно</td><td>API</td><td>Ожидаемый результат задачи</td></tr>
-                <tr><td>depends_on</td><td>Нет</td><td>1,2</td><td>ID задач, от которых зависит текущая</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <div class="panel-grid">
-          <section class="panel">
-            <div class="panel-head">
-              <h3>Формат JSON</h3>
-              <p>Минимальная структура входных данных.</p>
-            </div>
-<pre class="code"><code>{
-  "meta": {
-    "name": "Название проекта",
-    "description": "Описание проекта"
-  },
-  "tasks": [
-    {
-      "id": 1,
-      "text": "Анализ требований",
-      "start_date": "2026-07-01",
-      "end_date": "2026-07-03",
-      "assignee": "Иван",
-      "category": "Аналитика",
-      "deliverable": "Список требований"
-    }
-  ],
-  "links": [
-    {
-      "id": 1,
-      "source": 1,
-      "target": 2,
-      "type": "finish_to_start"
-    }
-  ]
-}</code></pre>
-          </section>
-
-          <section class="panel">
-            <div class="panel-head">
-              <h3>Текущие данные</h3>
-              <p>Загруженный проект в JSON-формате.</p>
-            </div>
-            <pre id="currentJson" class="code small-code"><code>{}</code></pre>
-          </section>
-        </div>
-      </section>
     </main>
   </div>
-
   <script src="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
-  <script src="./assets/app.js"></script>
-</body>
+  <script src="./assets/js/utils.js"></script>
+  <script src="./assets/js/data.js"></script>
+  <script src="./assets/js/validation.js"></script>
+  <script src="./assets/js/dashboard.js"></script>
+  <script src="./assets/js/gantt.js"></script>
+  <script src="./assets/js/resource.js"></script>
+  <script src="./assets/js/three-view.js"></script>
+  <script src="./assets/js/report.js"></script>
+  <script src="./assets/js/app.js"></script></body>
 </html>

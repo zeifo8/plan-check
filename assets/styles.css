@@ -1203,3 +1203,6 @@ a.btn {
   cursor: pointer;
   font-weight: 900;
 }
+
+/* Навигация между отдельными HTML-страницами */
+.nav a.nav-item { text-decoration: none; }
